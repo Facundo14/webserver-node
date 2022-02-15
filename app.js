@@ -19,30 +19,30 @@ app.use(express.static('public'));
 //   res.send('Home page')
 // });
 
-app.get('/', (req, res) => {
-  res.render('home',{
-    nombre: 'Facundo Tanovich',
-    titulo: 'Curso de Node'
-  });
-});
+// app.get('/', (req, res) => {
+//   res.render('home',{
+//     nombre: 'Facundo Tanovich',
+//     titulo: 'Curso de Node'
+//   });
+// });
 
-app.get('/elements', (req, res) => {
-  res.render('elements',{
-    nombre: 'Facundo Tanovich',
-    titulo: 'Curso de Node'
-  });
-});
+// app.get('/elements', (req, res) => {
+//   res.render('elements',{
+//     nombre: 'Facundo Tanovich',
+//     titulo: 'Curso de Node'
+//   });
+// });
 
-app.get('/generic', (req, res) => {
-  res.render('generic',{
-    nombre: 'Facundo Tanovich',
-    titulo: 'Curso de Node'
-  });
-});
+// app.get('/generic', (req, res) => {
+//   res.render('generic',{
+//     nombre: 'Facundo Tanovich',
+//     titulo: 'Curso de Node'
+//   });
+// });
 
 
 app.get('*', (req, res) => {
-  res.sendFile(__dirname + '/public/404.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(port, () => {
